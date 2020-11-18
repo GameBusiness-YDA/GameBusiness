@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Triangle_Yellow
+  - Triangle_Blue
+  - Triangle_Red
+  - Square_Red
+  - Square_Blue
+  - Square_Yellow
+  - Circle_Red
+  - Circle_Bule
+  - Circle_Yellow
   layers:
   - Default
   - TransparentFX
