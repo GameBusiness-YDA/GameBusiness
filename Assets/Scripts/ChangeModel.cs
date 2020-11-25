@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChangeModel : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> SetModels = new List<GameObject>();
+    private List<GameObject> setModels = new List<GameObject>();
 
     //テスト用
     byte i;
@@ -15,19 +15,6 @@ public class ChangeModel : MonoBehaviour
     void Start()
     {
         i = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            i = (byte)Random.Range(0, SetModels.Count);
-            changeShape(i);
-
-            //Destroy(this);
-            Destroy(this.gameObject);
-        }
     }
 
     public void changeShape(byte i)
@@ -40,7 +27,16 @@ public class ChangeModel : MonoBehaviour
         newObj.transform.localScale = this.gameObject.transform.localScale;*/
 
         //生成する(リストからPrefabを読み込む、)
-        Instantiate(SetModels[i], this.gameObject.transform.position,this.gameObject.transform.rotation);
+        GameObject newObj = Instantiate(setModels[i], this.gameObject.transform.position,this.gameObject.transform.rotation);
+        newObj.name = ("Player");
+        newObj.tag = ("Player");
 
+
+        Destroy(this.gameObject);
+    }
+
+    public GameObject GetModel(byte i)
+    {
+        return setModels[i];
     }
 }

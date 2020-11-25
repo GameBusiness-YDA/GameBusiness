@@ -11,8 +11,8 @@ TagManager:
   - Square_Blue
   - Square_Yellow
   - Circle_Red
-  - Circle_Bule
   - Circle_Yellow
+  - Circle_Blue
   layers:
   - Default
   - TransparentFX

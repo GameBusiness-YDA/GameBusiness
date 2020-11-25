@@ -21,7 +21,7 @@ public class ChangeColor : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         
-        changeColors(i);
+        //changeColors(i);
     }
 
     /// <summary>
@@ -31,5 +31,10 @@ public class ChangeColor : MonoBehaviour
     public void changeColors(byte i)
     {
         rend.material = setMaterials[i];
+    }
+
+    public Material GetColor(byte i)
+    {
+        return setMaterials[i];
     }
 }
