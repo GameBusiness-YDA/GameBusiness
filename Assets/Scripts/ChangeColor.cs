@@ -21,7 +21,7 @@ public class ChangeColor : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         
-        //changeColors(i);
+        changeColors(i);
     }
 
     /// <summary>
