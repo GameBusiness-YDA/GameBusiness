@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ButtonObject : MonoBehaviour
 {
-    
-    public Material ButtonMaterial
+
+    public Sprite ButtonImage
     {
-        get { return ButtonMaterial; }
-        set { ButtonMaterial = value; }
+        get { return ButtonImage; }
+        set { ButtonImage = value; }
     }
 
     public string ButtonTag
@@ -16,7 +16,5 @@ public class ButtonObject : MonoBehaviour
         get { return ButtonTag; }
         set { ButtonTag = value; }
     }
-
-
 
 }

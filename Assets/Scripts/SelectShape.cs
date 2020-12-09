@@ -17,11 +17,19 @@ public class SelectShape : MonoBehaviour
     GameObject s_PlayerManeger;
     PlayerManager playerManager;
 
+    GameObject s_ButtonManager;
+    ButtonManager buttonManager;
+
+    [SerializeField] byte buttonIndex;
+
     private void Awake()
     {
         button = GetComponent<Button>();
         s_PlayerManeger = GameObject.Find("PlayerManager");
         playerManager = s_PlayerManeger.GetComponent<PlayerManager>();
+
+        s_ButtonManager = GameObject.Find("ButtonManager");
+        buttonManager = s_ButtonManager.GetComponent<ButtonManager>();
     }
 
     // Start is called before the first frame update
@@ -29,7 +37,8 @@ public class SelectShape : MonoBehaviour
     {
         spriteNum = 0;
         spriteState = button.spriteState;
-        SetButtonSprite((byte)Random.Range(0, BTN_sprite.Count));
+        SetButtonSprite();
+        //SetButtonSprite((byte)Random.Range(0, BTN_sprite.Count));
     }
 
 
@@ -37,22 +46,20 @@ public class SelectShape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
-            changeButton();
-        }
+            SetButtonSprite();
+        }*/
+        //if (buttonManager.IsChange)
+            SetButtonSprite();
     }
 
     //引数で指定された画像をボタンのSpriteに差し込む。
-    public bool SetButtonSprite(byte i)
+    public bool SetButtonSprite()
     {
-        if (i > BTN_sprite.Count)
-        {
-            Debug.Log("BTN_spriteのリスト外参照が発生しました");
-            return false;
-        }
-        button.GetComponent<Image>().sprite = BTN_sprite[i];
-        spriteNum = i;
+        Debug.Log("変えます");
+        button.GetComponent<Image>().sprite = buttonManager.GetSprite(buttonIndex);
+        spriteNum = buttonManager.GetSpriteNum(buttonIndex);
         return true;
     }
 
@@ -66,7 +73,7 @@ public class SelectShape : MonoBehaviour
     }
 
 
-    public void changeButton()
+    /*public void changeButton()
     {
         SetButtonSprite((byte)Random.Range(0, BTN_sprite.Count));
     }
@@ -74,7 +81,7 @@ public class SelectShape : MonoBehaviour
     {
         SetButtonSprite(i);
     }
-
+    */
 
 
 }
