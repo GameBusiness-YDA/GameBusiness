@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2868270627528388794}
   - component: {fileID: 6367968305905149444}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TryangleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
