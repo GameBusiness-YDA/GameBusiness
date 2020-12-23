@@ -57,7 +57,6 @@ public class SelectShape : MonoBehaviour
     //引数で指定された画像をボタンのSpriteに差し込む。
     public bool SetButtonSprite()
     {
-        Debug.Log("変えます");
         button.GetComponent<Image>().sprite = buttonManager.GetSprite(buttonIndex);
         spriteNum = buttonManager.GetSpriteNum(buttonIndex);
         return true;
@@ -69,7 +68,7 @@ public class SelectShape : MonoBehaviour
         playerManager.B_Sharpe = (byte)(spriteNum / 3);
         playerManager.B_Tag = spriteNum;
         playerManager.ModelChandeFlag = true;
-        Debug.Log("PlayerのPrefabを" + (spriteNum % 3) + "カラーを" + ((byte)(spriteNum / 3)) + "に変更しました");
+        //Debug.Log("PlayerのPrefabを" + (spriteNum % 3) + "カラーを" + ((byte)(spriteNum / 3)) + "に変更しました");
     }
 
 
