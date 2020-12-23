@@ -20,7 +20,7 @@ public class SelectShape : MonoBehaviour
     GameObject s_ButtonManager;
     ButtonManager buttonManager;
 
-    [SerializeField] byte buttonIndex;
+    [SerializeField,Range(0,2)] byte buttonIndex;
 
     private void Awake()
     {
@@ -51,7 +51,7 @@ public class SelectShape : MonoBehaviour
             SetButtonSprite();
         }*/
         //if (buttonManager.IsChange)
-            SetButtonSprite();
+        SetButtonSprite();
     }
 
     //引数で指定された画像をボタンのSpriteに差し込む。
