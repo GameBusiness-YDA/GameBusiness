@@ -15,25 +15,6 @@ public class WallGeneration : MonoBehaviour
     // 生成までの時間
     float generatTime;
 
-    public byte i
-    {
-        get;
-        private set;
-    }
-
-    public byte j
-    {
-        get;
-        private set;
-    }
-
-    public byte saveI
-    {
-        get;
-        private set;
-    }
-
-
     //追記 タイマーにセットする時間
     [SerializeField] float defaultgeneratTime;
 
@@ -50,35 +31,65 @@ public class WallGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         generatTime -= Time.deltaTime;
 
         if (generatTime < 0.0f)
         {
-
-            i = (byte)Random.Range(0, wall.Count);
-            SaveNumber(i);
-            //j = 1;
-
+            GameObject obj;
+            obj = wall[Random.Range(0, wall.Count)];
             //Instantiate(wall, new Vector3(0.0f, 1.0f, 10.0f), Quaternion.identity);
-            Instantiate(wall[i], new Vector3(8.5f, -3.6f, 10.0f), Quaternion.identity);
+            //Instantiate(wall[Random.Range(0, wall.Count)], new Vector3(0.0f, 1.0f, 10.0f), Quaternion.identity);
+            
+            //Tag付け用に変更
+            Instantiate(obj, new Vector3(8.5f, -3.6f, 10.0f), Quaternion.identity);
+            //obj.GetComponent<Renderer>().material = ;
+            //obj.tag = Tag();
+
+            obj.layer = 12;
+
+            //タイマーを外部から弄れるように変更
             generatTime = defaultgeneratTime;
             //generatTime = 2.0f;
         }
     }
 
-    byte SaveNumber(byte num)
+    /*string Tag()
     {
-        saveI = num;
+        string tag;
 
-        return saveI;
-    }
+        switch (b_tag)
+        {
+            case 0:
+                this.tag = "Triangle_Red";
+                break;
+            case 1:
+                this.tag = ("Triangle_Blue");
+                break;
+            case 2:
+                this.tag = ("Triangle_Yellow");
+                break;
+            case 3:
+                this.tag = ("Square_Red");
+                break;
+            case 4:
+                this.tag = ("Square_Blue");
+                break;
+            case 5:
+                this.tag = ("Square_Yellow");
+                break;
+            case 6:
+                this.tag = ("Circle_Red");
+                break;
+            case 7:
+                this.tag = ("Circle_Blue");
+                break;
+            case 8:
+                this.tag = ("Circle_Yellow");
+                break;
+        }
 
-    public byte ReturnColorNumber()
-    {
-
-        return saveI;
-
-    }
+    
+        return this.tag;
+    }*/
 
 }
