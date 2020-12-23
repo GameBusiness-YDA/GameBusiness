@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    List<ButtonObject> buttonNum = new List<ButtonObject>();
     [SerializeField] List<Sprite> sprite = new List<Sprite>();
     [SerializeField, Range(0, 2)] List<byte> buttonSelect = new List<byte>();
 
