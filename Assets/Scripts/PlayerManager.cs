@@ -67,13 +67,13 @@ public class PlayerManager : MonoBehaviour
         switch (b_tag)
         {
             case 0:
-                this.tag = "Triangle_Red";
+                this.tag = "Tryangle_Red";
                 break;
             case 1:
-                this.tag = ("Triangle_Blue");
+                this.tag = ("Tryangle_Blue");
                 break;
             case 2:
-                this.tag = ("Triangle_Yellow");
+                this.tag = ("Tryangle_Yellow");
                 break;
             case 3:
                 this.tag = ("Square_Red");

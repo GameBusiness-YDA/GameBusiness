@@ -8,6 +8,7 @@ public class ComboManager : MonoBehaviour
 
     [SerializeField]int MaxCombo;
     [SerializeField]int NowCombo;
+    [SerializeField] int ComboCount;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class ComboManager : MonoBehaviour
     {
         MaxCombo = 0;
         NowCombo = 0;
+        ComboCount = 0;
     }
 
     // Update is called once per frame
@@ -29,12 +31,14 @@ public class ComboManager : MonoBehaviour
     public void ComboPuls()
     {
         NowCombo++;
+        ComboCount++;
         if (MaxCombo < NowCombo) MaxCombo = NowCombo;
     }
 
     public void ComboReset()
     {
         NowCombo = 0;
+        ComboCount++;
     }
 
     public int GetCombo()

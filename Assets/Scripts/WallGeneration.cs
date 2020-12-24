@@ -18,6 +18,30 @@ public class WallGeneration : MonoBehaviour
     //追記 タイマーにセットする時間
     [SerializeField] float defaultgeneratTime;
 
+    [SerializeField]public byte nextWall;
+
+
+    ChangeColor color;
+    GameObject s_Color;
+
+    public byte i
+    {
+        get;
+        private set;
+    }
+
+    public byte j
+    {
+        get;
+        private set;
+    }
+
+    public byte saveI
+    {
+        get;
+        private set;
+    }
+
     private void Awake()
     {
         generatTime = defaultgeneratTime;
@@ -25,6 +49,10 @@ public class WallGeneration : MonoBehaviour
 
     private void Start()
     {
+
+        s_Color = GameObject.Find("PlayerManager");
+        color = s_Color.GetComponent<ChangeColor>();
+
         //Instantiate(wall, new Vector3(0.0f, 2.0f, 0.0f),Quaternion.identity);
     }
 
@@ -35,16 +63,17 @@ public class WallGeneration : MonoBehaviour
 
         if (generatTime < 0.0f)
         {
+            i = (byte)Random.Range(0, wall.Count);
+            SaveNumber((byte)(nextWall%3));
+            //SaveNumber(i);
+
             GameObject obj;
-            obj = wall[Random.Range(0, wall.Count)];
-            //Instantiate(wall, new Vector3(0.0f, 1.0f, 10.0f), Quaternion.identity);
-            //Instantiate(wall[Random.Range(0, wall.Count)], new Vector3(0.0f, 1.0f, 10.0f), Quaternion.identity);
+            obj = wall[nextWall/3];
             
             //Tag付け用に変更
             Instantiate(obj, new Vector3(8.5f, -3.6f, 10.0f), Quaternion.identity);
-            //obj.GetComponent<Renderer>().material = ;
-            //obj.tag = Tag();
-
+            //obj.GetComponent<Renderer>().material = color.GetColor((byte)(nextWall%3));
+           // obj.tag = GetTag((byte)(nextWall / 3), (byte)(nextWall % 3));
             obj.layer = 12;
 
             //タイマーを外部から弄れるように変更
@@ -53,43 +82,74 @@ public class WallGeneration : MonoBehaviour
         }
     }
 
-    /*string Tag()
+    public byte NextWall{
+        set { nextWall = value; }
+        get { return nextWall; }
+    }
+
+    byte SaveNumber(byte num)
     {
-        string tag;
+        saveI = num;
 
-        switch (b_tag)
+        return saveI;
+    }
+
+    public byte ReturnColorNumber()
+    {
+
+        return saveI;
+
+    }
+
+    string GetTag(byte i,byte j)
+    {
+        string aaa =("");
+
+        if (i == 0)
         {
-            case 0:
-                this.tag = "Triangle_Red";
-                break;
-            case 1:
-                this.tag = ("Triangle_Blue");
-                break;
-            case 2:
-                this.tag = ("Triangle_Yellow");
-                break;
-            case 3:
-                this.tag = ("Square_Red");
-                break;
-            case 4:
-                this.tag = ("Square_Blue");
-                break;
-            case 5:
-                this.tag = ("Square_Yellow");
-                break;
-            case 6:
-                this.tag = ("Circle_Red");
-                break;
-            case 7:
-                this.tag = ("Circle_Blue");
-                break;
-            case 8:
-                this.tag = ("Circle_Yellow");
-                break;
+            if (j == 0)
+            {
+                aaa = "Circle_Blue";
+            }
+            else if (j == 1)
+            {
+                aaa = "Circle_Red";
+            }
+            else if (j == 2)
+            {
+                aaa = "Circle_Yellow";
+            }
         }
-
-    
-        return this.tag;
-    }*/
-
+        else if (i == 1)
+        {
+            if (j == 0)
+            {
+                aaa = "Square_Blue";
+            }
+            else if (j == 1)
+            {
+                aaa = "Square_Red";
+            }
+            else if (j == 2)
+            {
+                aaa = "Square_Yellow";
+            }
+        }
+        else
+        {
+            if (j == 0)
+            {
+                aaa = "Tryangle_Blue";
+            }
+            else if (j == 1)
+            {
+                aaa = "Tryangle_Red";
+            }
+            else if (j == 2)
+            {
+                aaa = "Tryangle_Yellow";
+            }
+        }
+        return aaa;
+    }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] List<Sprite> sprite = new List<Sprite>();
+    [SerializeField] List<Sprite> sprite = new List<Sprite>(9);
     [SerializeField, Range(0, 2)] List<byte> buttonSelect = new List<byte>();
 
     byte num;
@@ -38,6 +38,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ChangeButtons()
     {
+
         for (byte i = 0; i < 3; i++)
         {
             num = (byte)Random.Range(0, sprite.Count);
@@ -56,8 +57,16 @@ public class ButtonManager : MonoBehaviour
             }
         }
 
+
+        s_WallGeneration = GameObject.Find("WallManager");
+        wallGeneration = s_WallGeneration.GetComponent<WallGeneration>();
+
         //次に生成する壁の色形をここで指定する。
-        //wallGeneration = buttonSelect[Random.Range(0, 2)];
+        byte k = buttonSelect[Random.Range(0, 2)];
+        Debug.Log(k);
+
+        wallGeneration.NextWall = k;
+        
 
     }
 

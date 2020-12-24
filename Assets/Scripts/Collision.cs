@@ -7,11 +7,27 @@ public class Collision : MonoBehaviour
     /// </summary>
     byte collisionResult;
 
+    GameObject s_comboManager;
+    ComboManager comboManager;
+
+    GameObject s_ButtonManager;
+    ButtonManager buttonManager;
+
+    public AudioClip OKSound;
+    public AudioClip NGSound;
+
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        s_comboManager = GameObject.Find("ComboManager");
+        comboManager = s_comboManager.GetComponent<ComboManager>();
 
+        s_ButtonManager = GameObject.Find("ButtonManager");
+        buttonManager = s_ButtonManager.GetComponent<ButtonManager>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,16 +36,28 @@ public class Collision : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 0:判定無し 1:クリア 2:ミス
+    /// </summary>
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("何かに当たった");
+
         if (this.gameObject.tag == other.tag)
         {
             collisionResult = 1;
+            comboManager.ComboPuls();
+            audioSource.PlayOneShot(OKSound);
         }
         else
         {
             collisionResult = 2;
+            comboManager.ComboReset();
+            audioSource.PlayOneShot(NGSound);
         }
+
+        buttonManager.ChangeButtons();
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
@@ -37,18 +65,4 @@ public class Collision : MonoBehaviour
         collisionResult = 0;
     }
 
-
-    #region GetSet関数
-
-
-    /// <summary>
-    /// 0:判定無し 1:クリア 2:ミス
-    /// </summary>
-    public byte CollisionResult
-    {
-        get { return collisionResult; }
-        set { collisionResult = value; }
-    }
-
-    #endregion
 }
