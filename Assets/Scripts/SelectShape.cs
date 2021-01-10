@@ -28,6 +28,9 @@ public class SelectShape : MonoBehaviour
     GameObject s_ButtonManager;
     ButtonManager buttonManager;
 
+    GameObject s_SEManager;
+    SEManager seManager;
+
     [SerializeField,Range(0,2)] byte buttonIndex;
 
     private void Awake()
@@ -38,6 +41,9 @@ public class SelectShape : MonoBehaviour
 
         s_ButtonManager = GameObject.Find("ButtonManager");
         buttonManager = s_ButtonManager.GetComponent<ButtonManager>();
+
+        s_SEManager = GameObject.Find("SEManager");
+        seManager = s_SEManager.GetComponent<SEManager>();
     }
 
     // Start is called before the first frame update
@@ -73,6 +79,7 @@ public class SelectShape : MonoBehaviour
         playerManager.B_Tag = spriteNum;
         playerManager.ModelChandeFlag = true;
         //Debug.Log("PlayerのPrefabを" + (spriteNum % 3) + "カラーを" + ((byte)(spriteNum / 3)) + "に変更しました");
+        seManager.PlayButtonSE(spriteNum);
     }
 
 

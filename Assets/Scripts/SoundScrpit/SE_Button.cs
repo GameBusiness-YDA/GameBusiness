@@ -16,10 +16,7 @@ public class SE_Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            onClick();
-        } 
+        
     }
 
     public void onClick()

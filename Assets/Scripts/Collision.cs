@@ -13,12 +13,11 @@ public class Collision : MonoBehaviour
     GameObject s_ButtonManager;
     ButtonManager buttonManager;
 
-
     GameObject s_WallGeneration;
     WallGeneration wallGeneration;
 
-    public AudioClip OKSound;
-    public AudioClip NGSound;
+    GameObject s_SEManager;
+    SEManager seManager;
 
     AudioSource audioSource;
 
@@ -33,6 +32,9 @@ public class Collision : MonoBehaviour
 
         s_WallGeneration = GameObject.Find("WallManager");
         wallGeneration = s_WallGeneration.GetComponent<WallGeneration>();
+
+        s_SEManager = GameObject.Find("SEManager");
+        seManager = s_SEManager.GetComponent<SEManager>();
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -54,16 +56,16 @@ public class Collision : MonoBehaviour
         {
             collisionResult = 1;
             comboManager.ComboPuls();
-            //audioSource.PlayOneShot(OKSound);
+            seManager.PlayCollisionSEOK();
         }
         else
         {
             collisionResult = 2;
             comboManager.ComboReset();
-            //audioSource.PlayOneShot(NGSound);
+            seManager.PlayCollisionSENG();
         }
 
-        Debug.Log("Collisions.cs");
+        //bug.Log("Collisions.cs");
         wallGeneration.CountTimeFlg = true;
         buttonManager.ChangeButtons();
         Destroy(this.gameObject);

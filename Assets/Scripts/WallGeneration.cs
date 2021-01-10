@@ -40,6 +40,9 @@ public class WallGeneration : MonoBehaviour
     ChangeColor color;
     GameObject s_Color;
 
+    GameObject s_SEManager;
+    SEManager seManager;
+
     bool countTimeFlg;
 
     byte countSpawnNum;
@@ -78,6 +81,9 @@ public class WallGeneration : MonoBehaviour
         s_Tag = GameObject.Find("TagManager");
         tagManager = s_Tag.GetComponent<TagManager>();
 
+        s_SEManager = GameObject.Find("SEManager");
+        seManager = s_SEManager.GetComponent<SEManager>();
+
         //Instantiate(wall, new Vector3(0.0f, 2.0f, 0.0f),Quaternion.identity);
         countTimeFlg = true;
     }
@@ -115,7 +121,9 @@ public class WallGeneration : MonoBehaviour
         obj.transform.Find("default").GetComponent<Renderer>().material = color.GetColor((byte)(nextWall % 3));
         //obj.GetComponent<Renderer>().material = color.GetColor((byte)(nextWall%3));
         obj.tag = tagManager.GetTag(nextWall);
-       
+
+        seManager.WallTagNumber = nextWall;
+
         //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = "色 = " + nextWall%3 + ": 形 = " + nextWall/3;
         #region Debug
 
