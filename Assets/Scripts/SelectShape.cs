@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*このソースが何か
+ * 
+ * 作成者		：足立拓海
+ * 作成日		：2020/12
+ * ソース概要	：ボタンを押すとそのボタンの形にPlayerが変わる。
+ * 外部参照変数	：
+ * 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,12 +54,8 @@ public class SelectShape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetButtonSprite();
-        }*/
-        //if (buttonManager.IsChange)
         SetButtonSprite();
+        transform.Find("ButtonText").GetComponent<ChangeText>().ChangeTextString = spriteNum.ToString();
     }
 
     //引数で指定された画像をボタンのSpriteに差し込む。

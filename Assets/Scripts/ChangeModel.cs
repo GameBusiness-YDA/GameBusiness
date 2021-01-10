@@ -17,14 +17,14 @@ public class ChangeModel : MonoBehaviour
         i = 0;
     }
 
-    public void changeShape(byte i)
+    /*public void changeShape(byte i)
     {
         //GameObject newObj = new GameObject();
 
         //生成する
         /*newObj = GameObject.Instantiate(SetModels[i]);
         newObj.transform.position = this.gameObject.transform.position;
-        newObj.transform.localScale = this.gameObject.transform.localScale;*/
+        newObj.transform.localScale = this.gameObject.transform.localScale;
 
         //生成する(リストからPrefabを読み込む、)
         GameObject newObj = Instantiate(setModels[i], this.gameObject.transform.position,this.gameObject.transform.rotation);
@@ -33,7 +33,7 @@ public class ChangeModel : MonoBehaviour
 
 
         Destroy(this.gameObject);
-    }
+    }*/
 
     public GameObject GetModel(byte i)
     {

@@ -8,12 +8,9 @@ public class ChangeColor : MonoBehaviour
     [SerializeField]
     List<Material> setMaterials = new List<Material>();
 
-    [SerializeField]
-    GameObject wg;
+    //Renderer rend;
 
-    Renderer rend;
-
-    //形
+    /*//形
     public byte i
     {
         get;
@@ -25,19 +22,20 @@ public class ChangeColor : MonoBehaviour
     {
         get;
         private set;
-    }
+    }*/
 
     // Start is called before the first frame update
     void Awake()
     {
-        /* //生成時に、起動
+        /* 
+          //生成時に、起動
          i = (byte)Random.Range(0,setMaterials.Count);
 
          rend = GetComponent<Renderer>();
 
          changeColors(i);*/
 
-        i = FindObjectOfType<WallGeneration>().ReturnColorNumber();
+        /*i = FindObjectOfType<WallGeneration>().ReturnColorNumber();
 
         //生成時に、起動
         j = (byte)Random.Range(0, setMaterials.Count);
@@ -87,11 +85,11 @@ public class ChangeColor : MonoBehaviour
             {
                 this.gameObject.tag = "Tryangle_Yellow";
             }
-        }
+        }*/
 
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
 
-        changeColors(j);
+        //changeColors(j);*/
 
     }
 
@@ -101,7 +99,7 @@ public class ChangeColor : MonoBehaviour
     /// <param name="i"></param>
     public void changeColors(byte i)
     {
-        rend.material = setMaterials[i];
+        //rend.material = setMaterials[i];
     }
 
     public Material GetColor(byte i)

@@ -13,6 +13,10 @@ public class Collision : MonoBehaviour
     GameObject s_ButtonManager;
     ButtonManager buttonManager;
 
+
+    GameObject s_WallGeneration;
+    WallGeneration wallGeneration;
+
     public AudioClip OKSound;
     public AudioClip NGSound;
 
@@ -26,6 +30,9 @@ public class Collision : MonoBehaviour
 
         s_ButtonManager = GameObject.Find("ButtonManager");
         buttonManager = s_ButtonManager.GetComponent<ButtonManager>();
+
+        s_WallGeneration = GameObject.Find("WallManager");
+        wallGeneration = s_WallGeneration.GetComponent<WallGeneration>();
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -41,21 +48,23 @@ public class Collision : MonoBehaviour
     /// </summary>
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("何かに当たった");
+        //Debug.Log("何かに当たった");
 
         if (this.gameObject.tag == other.tag)
         {
             collisionResult = 1;
             comboManager.ComboPuls();
-            audioSource.PlayOneShot(OKSound);
+            //audioSource.PlayOneShot(OKSound);
         }
         else
         {
             collisionResult = 2;
             comboManager.ComboReset();
-            audioSource.PlayOneShot(NGSound);
+            //audioSource.PlayOneShot(NGSound);
         }
 
+        Debug.Log("Collisions.cs");
+        wallGeneration.CountTimeFlg = true;
         buttonManager.ChangeButtons();
         Destroy(this.gameObject);
     }
