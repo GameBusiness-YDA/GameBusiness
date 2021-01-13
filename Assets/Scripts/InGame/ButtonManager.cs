@@ -4,10 +4,12 @@ using UnityEngine;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] List<Sprite> sprite = new List<Sprite>(9);
-    [SerializeField, Range(0, 2)] List<byte> buttonSelect = new List<byte>();
+    [SerializeField] List<byte> buttonSelect = new List<byte>();
 
     byte num;
     bool isChange;
+
+    byte nextWallNumber;
 
     GameObject s_WallGeneration;
     WallGeneration wallGeneration;
@@ -29,11 +31,11 @@ public class ButtonManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             ChangeButtons();
             isChange = true;
-        }
+        }*/
     }
 
     public void ChangeButtons()
@@ -62,12 +64,14 @@ public class ButtonManager : MonoBehaviour
         wallGeneration = s_WallGeneration.GetComponent<WallGeneration>();
 
         //次に生成する壁の色形をここで指定する。
-        byte k = buttonSelect[Random.Range(0, 2)];
-        Debug.Log(k);
+        nextWallNumber = buttonSelect[Random.Range(0, 2)];
+        //Debug.Log(nextWallNumber);
 
-        wallGeneration.NextWall = k;
-        
+        GameObject.Find("NextWallText").GetComponent<ChangeText>().ChangeTextString = nextWallNumber.ToString();
 
+        wallGeneration.NextWall = nextWallNumber;
+
+        Debug.Log("ButtonManager.cs");
     }
 
     public byte GetSpriteNum(byte i)
@@ -85,4 +89,10 @@ public class ButtonManager : MonoBehaviour
         get { return isChange; }
         set { isChange = value; }
     }
+
+    public byte NextWallNumber
+    {
+        get { return nextWallNumber; }
+    }
+
 }

@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*このソースが何か
+ * 
+ * 作成者		：足立拓海
+ * 作成日		：2020/12
+ * ソース概要	：ボタンを押すとそのボタンの形にPlayerが変わる。
+ * 外部参照変数	：
+ * 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +28,9 @@ public class SelectShape : MonoBehaviour
     GameObject s_ButtonManager;
     ButtonManager buttonManager;
 
+    GameObject s_SEManager;
+    SEManager seManager;
+
     [SerializeField,Range(0,2)] byte buttonIndex;
 
     private void Awake()
@@ -30,6 +41,9 @@ public class SelectShape : MonoBehaviour
 
         s_ButtonManager = GameObject.Find("ButtonManager");
         buttonManager = s_ButtonManager.GetComponent<ButtonManager>();
+
+        s_SEManager = GameObject.Find("SEManager");
+        seManager = s_SEManager.GetComponent<SEManager>();
     }
 
     // Start is called before the first frame update
@@ -46,12 +60,8 @@ public class SelectShape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetButtonSprite();
-        }*/
-        //if (buttonManager.IsChange)
         SetButtonSprite();
+        transform.Find("ButtonText").GetComponent<ChangeText>().ChangeTextString = spriteNum.ToString();
     }
 
     //引数で指定された画像をボタンのSpriteに差し込む。
@@ -69,6 +79,7 @@ public class SelectShape : MonoBehaviour
         playerManager.B_Tag = spriteNum;
         playerManager.ModelChandeFlag = true;
         //Debug.Log("PlayerのPrefabを" + (spriteNum % 3) + "カラーを" + ((byte)(spriteNum / 3)) + "に変更しました");
+        seManager.PlayButtonSE(spriteNum);
     }
 
 

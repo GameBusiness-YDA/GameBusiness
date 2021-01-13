@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* スクリプト名 ：PlayerManager.cs
+ * 作成者		：足立拓海
+ * 作成日		：2020/11/25
+ * ソース概要	：Playerを管理する為のスクリプト。
+ * 外部参照変数	：
+ * 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +20,9 @@ public class PlayerManager : MonoBehaviour
     ChangeModel model;
     GameObject s_Model;
 
+    TagManager tagManager;
+    GameObject s_Tag;
+
     Vector3 playerPosition;
     Quaternion playerRotation;
 
@@ -22,7 +32,7 @@ public class PlayerManager : MonoBehaviour
     byte b_sharpe;
     byte b_tag;
     //ボタンを押したかどうか
-    bool changed;
+    bool modelChangeFlg;
 
     private void Awake()
     {
@@ -31,6 +41,9 @@ public class PlayerManager : MonoBehaviour
 
         s_Model = GameObject.Find("PlayerManager");
         model = s_Model.GetComponent<ChangeModel>();
+
+        s_Tag = GameObject.Find("TagManager");
+        tagManager = s_Tag.GetComponent<TagManager>();
 
         rend = GetComponent<Renderer>();
 
@@ -48,57 +61,28 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (changed)
+        if (modelChangeFlg)
         {
+            //いまあるPlayerを削除
             Destroy(GameObject.Find("Player"));
-            //生成する(リストからPrefabを読み込む、)
+            //Playerがあった場所に生成する(リストからPrefabを読み込む、)
             GameObject newObj = Instantiate(model.GetModel(b_sharpe), playerPosition, playerRotation);
+            
+            //生成したオブジェクトのカラーをPlayerManagerのChangeColorから引き出す。
             newObj.GetComponent<Renderer>().material = color.GetColor(b_color);
-            newObj.name = ("Player");
-            newObj.tag = Tag();
-            changed = false;
+            
+            //生成したオブジェクトの名前をPlayerにする。
+            newObj.name = "Player";
+
+            //生成したオブジェクトのTagをTabManagerからもらう。
+            newObj.tag = tagManager.GetTag(b_tag);
+            
+            //
+            modelChangeFlg = false;
         }
     }
 
-    string Tag()
-    {
-        string tag;
-
-        switch (b_tag)
-        {
-            case 0:
-                this.tag = "Tryangle_Red";
-                break;
-            case 1:
-                this.tag = ("Tryangle_Blue");
-                break;
-            case 2:
-                this.tag = ("Tryangle_Yellow");
-                break;
-            case 3:
-                this.tag = ("Square_Red");
-                break;
-            case 4:
-                this.tag = ("Square_Blue");
-                break;
-            case 5:
-                this.tag = ("Square_Yellow");
-                break;
-            case 6:
-                this.tag = ("Circle_Red");
-                break;
-            case 7:
-                this.tag = ("Circle_Blue");
-                break;
-            case 8:
-                this.tag = ("Circle_Yellow");
-                break;
-        }
-
-
-        return this.tag;
-    }
-
+    
 
     #region GetSet関数
     public byte B_Color
@@ -121,7 +105,7 @@ public class PlayerManager : MonoBehaviour
 
     public bool ModelChandeFlag
     {
-        set { changed = value; }
+        set { modelChangeFlg = value; }
     }
     #endregion
 }

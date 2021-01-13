@@ -22,23 +22,19 @@ public class ComboManager : MonoBehaviour
         ComboCount = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ComboPuls()
     {
         NowCombo++;
         ComboCount++;
-        if (MaxCombo < NowCombo) MaxCombo = NowCombo;
+        if (MaxCombo <= NowCombo) MaxCombo = NowCombo;
+        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = NowCombo.ToString() + "Combo";
     }
 
     public void ComboReset()
     {
         NowCombo = 0;
         ComboCount++;
+        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = NowCombo.ToString() + "Combo";
     }
 
     public int GetCombo()
