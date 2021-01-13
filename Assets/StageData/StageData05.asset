@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 609444dd8e3fe0247b8817b1a1e042d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 30c3d21cb8e6dda4e9d09d4887cd6d78, type: 3}
   m_Name: StageData05
   m_EditorClassIdentifier: 
   stageNum: 5
-  walls: 5
-  firstWallSpeed: 3.5
-  secondWallSpeed: 3.5
-  thirdWallSpeed: 3.5
+  walls: 0
+  firstWallSpeed: 0
+  secondWallSpeed: 0
+  thirdWallSpeed: 0
