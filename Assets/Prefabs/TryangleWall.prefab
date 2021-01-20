@@ -60,8 +60,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a54599e702e3d40b6666fcb03eafc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OKSound: {fileID: 8300000, guid: ec36fd030521c9f459e15019d543e931, type: 3}
-  NGSound: {fileID: 8300000, guid: be7ff4a41b40e8343993a26c61eb3015, type: 3}
 --- !u!65 &-4463621071811250823
 BoxCollider:
   m_ObjectHideFlags: 0
