@@ -25,14 +25,9 @@ public class SEManager : MonoBehaviour
 
     public void PlayButtonSE(byte buttonTagNumber)
     {
-        if(wallTagNumber == buttonTagNumber)
-        {
-            audioSource.PlayOneShot(ButtonSeOK);
-        }
-        else
-        {
-            audioSource.PlayOneShot(ButtonSeNG);
-        }
+        if(wallTagNumber == buttonTagNumber) audioSource.PlayOneShot(ButtonSeOK);
+        else　                               audioSource.PlayOneShot(ButtonSeNG);
+        
     }
 
 

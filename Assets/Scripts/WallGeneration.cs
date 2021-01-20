@@ -45,6 +45,7 @@ public class WallGeneration : MonoBehaviour
 
     bool countTimeFlg;
 
+    [SerializeField]
     byte countSpawnNum;
 
     /*
@@ -95,7 +96,6 @@ public class WallGeneration : MonoBehaviour
         {
             generatTime -= Time.deltaTime;
         }
-
         if (generatTime < 0.0f)
         {
             /*i = (byte)Random.Range(0, wall.Count);
@@ -103,8 +103,8 @@ public class WallGeneration : MonoBehaviour
             //SaveNumber(i);
             SpawnNewWall();
         }
-        GameObject.Find("DebugText").GetComponent<ChangeText>().ChangeTextString = tagManager.GetTag(nextWall);//nextWall.ToString();// (nextWall % 3).ToString();//
-        GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = countSpawnNum.ToString();
+        //GameObject.Find("DebugText").GetComponent<ChangeText>().ChangeTextString = tagManager.GetTag(nextWall);//nextWall.ToString();// (nextWall % 3).ToString();//
+        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = countSpawnNum.ToString();
         //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = "色 = " + nextWall%3 + ": 形 = " + nextWall/3;
 
     }
@@ -141,7 +141,7 @@ public class WallGeneration : MonoBehaviour
         countTimeFlg = false;
         countSpawnNum++;
 
-        Debug.Log("WallGeneration.cs");
+        //Debug.Log("WallGeneration.cs");
     }
 
     public byte NextWall{

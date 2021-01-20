@@ -52,7 +52,6 @@ public class SelectShape : MonoBehaviour
         spriteNum = 0;
         spriteState = button.spriteState;
         SetButtonSprite();
-        //SetButtonSprite((byte)Random.Range(0, BTN_sprite.Count));
     }
 
 
@@ -78,20 +77,8 @@ public class SelectShape : MonoBehaviour
         playerManager.B_Sharpe = (byte)(spriteNum / 3);
         playerManager.B_Tag = spriteNum;
         playerManager.ModelChandeFlag = true;
-        //Debug.Log("PlayerのPrefabを" + (spriteNum % 3) + "カラーを" + ((byte)(spriteNum / 3)) + "に変更しました");
+        
         seManager.PlayButtonSE(spriteNum);
     }
-
-
-    /*public void changeButton()
-    {
-        SetButtonSprite((byte)Random.Range(0, BTN_sprite.Count));
-    }
-    public void changeButton(byte i)
-    {
-        SetButtonSprite(i);
-    }
-    */
-
 
 }

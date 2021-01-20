@@ -65,7 +65,6 @@ public class Collision : MonoBehaviour
             seManager.PlayCollisionSENG();
         }
 
-        //bug.Log("Collisions.cs");
         wallGeneration.CountTimeFlg = true;
         buttonManager.ChangeButtons();
         Destroy(this.gameObject);

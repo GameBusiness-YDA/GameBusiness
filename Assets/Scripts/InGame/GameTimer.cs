@@ -40,4 +40,9 @@ public class GameTimer : MonoBehaviour
 
         changeText.ChangeTextString = mm.ToString("D2") + ":" + ss.ToString("D2") + ":" + ms.ToString("D2");
     }
+
+    public float CountGameTimer
+    {
+        get { return countGameTime; }
+    }
 }

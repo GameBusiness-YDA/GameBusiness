@@ -12,13 +12,7 @@ public class SE_Button : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     public void onClick()
     {
         audioSource.PlayOneShot(ButtonSE);

@@ -29,15 +29,6 @@ public class ButtonManager : MonoBehaviour
         wallGeneration = s_WallGeneration.GetComponent<WallGeneration>();
     }
 
-    private void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ChangeButtons();
-            isChange = true;
-        }*/
-    }
-
     public void ChangeButtons()
     {
 
@@ -65,13 +56,11 @@ public class ButtonManager : MonoBehaviour
 
         //次に生成する壁の色形をここで指定する。
         nextWallNumber = buttonSelect[Random.Range(0, 2)];
-        //Debug.Log(nextWallNumber);
-
-        GameObject.Find("NextWallText").GetComponent<ChangeText>().ChangeTextString = nextWallNumber.ToString();
 
         wallGeneration.NextWall = nextWallNumber;
-
-        Debug.Log("ButtonManager.cs");
+        
+        //GameObject.Find("NextWallText").GetComponent<ChangeText>().ChangeTextString = nextWallNumber.ToString();
+        //Debug.Log("ButtonManager.cs");
     }
 
     public byte GetSpriteNum(byte i)
