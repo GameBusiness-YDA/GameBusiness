@@ -16,9 +16,9 @@ public class ChangeText : MonoBehaviour
 
     public GameObject textObject;
 
-    Text changeTextObject;
+    protected Text changeTextObject;
 
-    string changeTextString;
+    protected string changeTextString;
 
     // Start is called before the first frame update
     void Start()
