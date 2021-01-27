@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2601190589480757008}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0, y: -3.28, z: 0}
+  m_LocalScale: {x: 1, y: 0.9863841, z: 1}
   m_Children: []
   m_Father: {fileID: 5971582082462631283}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a6944f4904547e4fb039789da5fcd85, type: 2}
+  - {fileID: -3033667219593020291, guid: 99ef3af803346f74b93915ff39110f01, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +107,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6454928131067584457}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.5, y: -3.6, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_Children:
@@ -139,8 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a54599e702e3d40b6666fcb03eafc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OKSound: {fileID: 8300000, guid: ec36fd030521c9f459e15019d543e931, type: 3}
-  NGSound: {fileID: 8300000, guid: be7ff4a41b40e8343993a26c61eb3015, type: 3}
 --- !u!65 &5697982364087338130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -152,8 +150,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 50, z: 10}
-  m_Center: {x: -50, y: 25, z: 5}
+  m_Size: {x: 100, y: 48.062347, z: 10}
+  m_Center: {x: -50, y: 20.944876, z: 5}
 --- !u!23 &-3604304100435082107
 MeshRenderer:
   m_ObjectHideFlags: 0

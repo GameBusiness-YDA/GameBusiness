@@ -16,13 +16,13 @@ public class ComboText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        combo = ComboManager.Instance.GetCombo();
+        combo = ComboManager.Instance.NowCombo;
     }
 
     // Update is called once per frame
     void Update()
     {
-        combo= ComboManager.Instance.GetCombo();
+        combo= ComboManager.Instance.NowCombo;
         //combo++;
         Debug.Log("<color=red>コンボ："+combo.ToString()+"</color>");
         if(combo > 0)comboText.text = combo.ToString();

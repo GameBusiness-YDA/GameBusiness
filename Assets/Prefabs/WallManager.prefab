@@ -45,7 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall:
   - {fileID: 3208238989760031232, guid: 184f4e19f37ae3e44b369099250973d2, type: 3}
-  - {fileID: 5865410012216832412, guid: 80b9d46a19a90434cbbce53be01e45b7, type: 3}
+  - {fileID: 5865410012216832412, guid: 48cb289252d69da4c8207d43b6750dc2, type: 3}
   - {fileID: 6454928131067584457, guid: d1a4d0aa47794b24b89d9a68a9e5333d, type: 3}
-  defaultgeneratTime: 3
+  defaultgeneratTime: 0.5
   nextWall: 0
+  countSpawnNum: 0

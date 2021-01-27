@@ -70,10 +70,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 849500861512991625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f32befbfb5e036948b0ade5a98428b3f, type: 3}
+  m_Script: {fileID: 11500000, guid: ecabeff6251812644bded1a161dafc9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   setMaterials:
   - {fileID: 2100000, guid: 6a6944f4904547e4fb039789da5fcd85, type: 2}
-  - {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
   - {fileID: 2100000, guid: 640dc2f025ee433489ca50d9f685de47, type: 2}
+  - {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
