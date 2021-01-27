@@ -13,6 +13,10 @@ TagManager:
   - Circle_Red
   - Circle_Yellow
   - Circle_Blue
+  - StageSelect
+  - Title
+  - InGame
+  - Result
   layers:
   - Default
   - TransparentFX
