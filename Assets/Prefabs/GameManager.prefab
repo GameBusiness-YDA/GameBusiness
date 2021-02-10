@@ -44,5 +44,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnWallNum: 0
+  spawnWallMoveSpeed: 0
   maxCombo: 0
+  missComboCount: 0
   countGameTimer: 0
+  gameScore: 0
+  stageDataList:
+  - {fileID: 11400000, guid: cc62fbdaedef62e4bb7845240ea9f154, type: 2}
+  - {fileID: 11400000, guid: 2de11b092da15d646912f26f825313a8, type: 2}
+  - {fileID: 11400000, guid: 06de9c044fba11e4f86081dea4bfc23c, type: 2}
+  - {fileID: 11400000, guid: 65457c796f4c2bc489a1a7938ffc710f, type: 2}
+  - {fileID: 11400000, guid: 717d6340bff29d84eabb857c29d58d24, type: 2}
+  - {fileID: 11400000, guid: 4bb36d50ad0f93c4a90421f6fb4ece59, type: 2}
+  - {fileID: 11400000, guid: aaf56a7a959f64e448349c6604da9ac5, type: 2}
+  - {fileID: 11400000, guid: a0ab6ffb734e580489fc731e408fe0cd, type: 2}
+  - {fileID: 11400000, guid: 082302de6febf9e46a5242cb8967ddbb, type: 2}
+  - {fileID: 11400000, guid: aa9156583046515489bf370f8d8b53b8, type: 2}
