@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 103081063}
   m_Layer: 5
   m_Name: StageSelect_Button08
-  m_TagString: Untagged
+  m_TagString: Stage8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -47}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103081060
 MonoBehaviour:
@@ -264,7 +264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 6c3807ad342203644a43fd2d605728b4, type: 2}
 --- !u!1 &131914205
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,12 +321,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -492,12 +491,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -570,17 +569,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 1
 --- !u!222 &280978777
@@ -606,7 +605,7 @@ GameObject:
   - component: {fileID: 457922971}
   m_Layer: 5
   m_Name: StageSelect_Button04
-  m_TagString: Untagged
+  m_TagString: Stage4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,8 +627,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65, y: 20}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 155, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &457922968
 MonoBehaviour:
@@ -734,7 +733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 020190c76f92fdc4f9db5ea32655c0cf, type: 2}
 --- !u!1 &458944172
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +748,7 @@ GameObject:
   - component: {fileID: 458944177}
   m_Layer: 5
   m_Name: StageSelect_Button03
-  m_TagString: Untagged
+  m_TagString: Stage3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,8 +770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458944174
 MonoBehaviour:
@@ -878,7 +876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 0b088948c55b1af4da35e7f7ad81fdb1, type: 2}
 --- !u!1 &499999490
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -946,8 +943,8 @@ Canvas:
   m_GameObject: {fileID: 499999490}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1105,10 +1102,10 @@ RectTransform:
   m_Father: {fileID: 499999494}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 720, y: 1280}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0.022827148}
+  m_SizeDelta: {x: 800, y: 1277.3853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553284261
 MonoBehaviour:
@@ -1129,7 +1126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a334d445d64e679438863b43b5fe9909, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3990c6c529865d44c8f217ae9e28c32a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1204,12 +1201,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1282,12 +1279,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1360,12 +1357,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1396,7 +1393,7 @@ GameObject:
   - component: {fileID: 968655328}
   m_Layer: 5
   m_Name: StageSelect_Button06
-  m_TagString: Untagged
+  m_TagString: Stage6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1418,8 +1415,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: -47}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: -305, y: -100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968655325
 MonoBehaviour:
@@ -1524,7 +1521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 744f550de565b094085042cc6bc01929, type: 2}
 --- !u!1 &1077825301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1536,7 @@ GameObject:
   - component: {fileID: 1077825306}
   m_Layer: 5
   m_Name: StageSelect_Button07
-  m_TagString: Untagged
+  m_TagString: Stage7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1562,8 +1558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: -47}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: -155, y: -100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077825303
 MonoBehaviour:
@@ -1668,7 +1664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: be82332eef5aac0488082beb2e48b0ff, type: 2}
 --- !u!1 &1148953572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1679,7 @@ GameObject:
   - component: {fileID: 1148953577}
   m_Layer: 5
   m_Name: StageSelect_Button05
-  m_TagString: Untagged
+  m_TagString: Stage5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1706,8 +1701,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: 20}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 305, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148953574
 MonoBehaviour:
@@ -1812,7 +1807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: e6b0dcf9addc4c343bbdd3fef5f416f8, type: 2}
 --- !u!1 &1256199408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,12 +1930,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1989,10 +1983,10 @@ RectTransform:
   m_Father: {fileID: 499999494}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 207.29999}
-  m_SizeDelta: {x: 617, y: 108}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000091552734, y: -90}
+  m_SizeDelta: {x: 876.87427, y: 319.22772}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345231546
 MonoBehaviour:
@@ -2013,7 +2007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54ba77a2b7f242247944cfa1c82a56b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6d0efe742e7ca5409610196b63dfd79, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2088,12 +2082,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2109,6 +2103,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394385494}
   m_CullTransparentMesh: 0
+--- !u!1001 &1655563768
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6028255354526156392, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.139563
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 142.06349
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -231.19038
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028255354526156397, guid: ca34303093caf364fbd0522280868657,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca34303093caf364fbd0522280868657, type: 3}
 --- !u!1 &1705994400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2187,7 @@ GameObject:
   - component: {fileID: 1705994405}
   m_Layer: 5
   m_Name: StageSelect_Button09
-  m_TagString: Untagged
+  m_TagString: Stage9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2146,8 +2209,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65, y: -47}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 155, y: -100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1705994402
 MonoBehaviour:
@@ -2252,7 +2315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 8f0277a31afb11840a75739c78306629, type: 2}
 --- !u!1 &1832011103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,10 +2347,10 @@ RectTransform:
   m_Father: {fileID: 499999494}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 206}
-  m_SizeDelta: {x: 720, y: 140}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000061035156, y: -90}
+  m_SizeDelta: {x: 800, y: 360.7068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832011105
 MonoBehaviour:
@@ -2309,7 +2371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f58a729104dc13e4f8b7f8310ff9e422, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d74276872915cb547b6005fb56eb5764, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2353,7 +2415,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834757550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787aa5bff8ef42244ad6959f832f4dbf, type: 3}
+  m_Script: {fileID: 11500000, guid: e2b7b95bb8486ca46953cf3d0400e54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1834757552
@@ -2427,12 +2489,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2463,7 +2525,7 @@ GameObject:
   - component: {fileID: 1967203520}
   m_Layer: 5
   m_Name: StageSelect_Button02
-  m_TagString: Untagged
+  m_TagString: Stage2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2485,8 +2547,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: 20}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: -155, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967203517
 MonoBehaviour:
@@ -2591,7 +2653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 67916c3523591b54f9833d02063c2b04, type: 2}
 --- !u!1 &1997748796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,7 +2668,7 @@ GameObject:
   - component: {fileID: 1997748801}
   m_Layer: 5
   m_Name: StageSelect_Button01
-  m_TagString: Untagged
+  m_TagString: Stage1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2629,8 +2690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: 20}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: -305, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997748798
 MonoBehaviour:
@@ -2735,7 +2796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 280c25e6d06089f4584173a38ab99f75, type: 2}
 --- !u!1 &2055124922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,12 +2853,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 499d055594c150e49927d7b486a563a6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 0cac328abc333964d97f633f48ac280e, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2829,7 +2889,7 @@ GameObject:
   - component: {fileID: 2118278727}
   m_Layer: 5
   m_Name: StageSelect_Button10
-  m_TagString: Untagged
+  m_TagString: Stage10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2851,8 +2911,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: -47}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 305, y: -100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2118278724
 MonoBehaviour:
@@ -2957,4 +3017,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22442b4f134c924b96cb5598ac5fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 8840c34b307ea97468de784e07a49de4, type: 2}
