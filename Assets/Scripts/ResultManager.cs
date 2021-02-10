@@ -19,6 +19,14 @@ public class ResultManager : MonoBehaviour
     GameObject s_ChangeText;
     ChangeText changeText;
 
+    [SerializeField] AudioClip doramu;
+    [SerializeField] AudioClip jann;
+
+    bool finishScoreCountUpFlg;
+    bool startScoreCountUpFlg;
+
+    AudioSource audio;
+
     void Awake()
     {
         Instance = this;
@@ -33,14 +41,33 @@ public class ResultManager : MonoBehaviour
         s_ChangeText = GameObject.Find("TextScore");
         changeText = s_ChangeText.GetComponent<ChangeText>();
 
+        audio = GetComponent<AudioSource>();
+        finishScoreCountUpFlg = false;
+        startScoreCountUpFlg = false;
+
         score = gameManager.GameScore;
         countUpScore = 0;
+        audio.PlayOneShot(doramu);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(score>=countUpScore)countUpScore+=100;
+        if (score >= countUpScore)
+        {
+            countUpScore += 100;
+
+            if (audio.time >= 1f)
+            {
+                audio.time = 0.4f;
+            }
+        }
+        if (score <= countUpScore && !finishScoreCountUpFlg)
+        {
+            audio.Stop();
+            audio.PlayOneShot(jann);
+            finishScoreCountUpFlg = true;
+        }
 
         changeText.ChangeTextString = "Score : " + countUpScore;
     }
