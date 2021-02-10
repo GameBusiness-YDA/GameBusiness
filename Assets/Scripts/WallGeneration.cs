@@ -29,7 +29,7 @@ public class WallGeneration : MonoBehaviour
     float generatTime;
 
     //追記 タイマーにセットする時間
-    [SerializeField] float defaultgeneratTime;
+    float defaultgeneratTime;
 
     [SerializeField]public byte nextWall;
 
@@ -43,10 +43,21 @@ public class WallGeneration : MonoBehaviour
     GameObject s_SEManager;
     SEManager seManager;
 
+    GameObject s_GameManager;
+    GameManager gameManager;
+
+
     bool countTimeFlg;
+
+    byte wallSpawnNum;
 
     [SerializeField]
     byte countSpawnNum;
+
+
+    [SerializeField] float firstWallSpeed;
+    [SerializeField] float secondWallSpeed;
+    [SerializeField] float thirdWallSpeed;
 
     /*
     public byte i
@@ -69,8 +80,6 @@ public class WallGeneration : MonoBehaviour
 
     private void Awake()
     {
-        generatTime = defaultgeneratTime;
-        countSpawnNum = 0;
     }
 
     private void Start()
@@ -85,28 +94,38 @@ public class WallGeneration : MonoBehaviour
         s_SEManager = GameObject.Find("SEManager");
         seManager = s_SEManager.GetComponent<SEManager>();
 
+        defaultgeneratTime = 0;
+
         //Instantiate(wall, new Vector3(0.0f, 2.0f, 0.0f),Quaternion.identity);
-        countTimeFlg = true;
+        countTimeFlg = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (countTimeFlg == false && defaultgeneratTime == 0)
+        {
+
+            s_GameManager = GameObject.Find("GameManager");
+            gameManager = s_GameManager.GetComponent<GameManager>();
+            generatTime = gameManager.stageData.firstWallSpeed;
+            defaultgeneratTime = gameManager.stageData.firstWallSpeed;
+            wallSpawnNum = (byte)gameManager.stageData.walls;
+            countSpawnNum = 0;
+            firstWallSpeed = gameManager.firstWallSpeed;
+            secondWallSpeed = gameManager.secondWallSpeed;
+            thirdWallSpeed = gameManager.thirdWallSpeed;
+            if (defaultgeneratTime != 0) countTimeFlg = true;
+        }
+
         if (countTimeFlg == true)
         {
             generatTime -= Time.deltaTime;
         }
         if (generatTime < 0.0f)
         {
-            /*i = (byte)Random.Range(0, wall.Count);
-            SaveNumber((byte)(nextWall%3));*/
-            //SaveNumber(i);
             SpawnNewWall();
         }
-        //GameObject.Find("DebugText").GetComponent<ChangeText>().ChangeTextString = tagManager.GetTag(nextWall);//nextWall.ToString();// (nextWall % 3).ToString();//
-        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = countSpawnNum.ToString();
-        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = "色 = " + nextWall%3 + ": 形 = " + nextWall/3;
-
     }
 
     public void SpawnNewWall()
@@ -117,22 +136,21 @@ public class WallGeneration : MonoBehaviour
         //obj = ;
 
         //Tag付け用に変更
-        GameObject obj = Instantiate(wall[nextWall / 3], new Vector3(8.5f, -3.6f, 10.0f), Quaternion.identity);
+        GameObject obj = Instantiate(wall[nextWall / 3], new Vector3(8.5f, -3.6f, 20.0f), Quaternion.identity);
         obj.transform.Find("default").GetComponent<Renderer>().material = color.GetColor((byte)(nextWall % 3));
         //obj.GetComponent<Renderer>().material = color.GetColor((byte)(nextWall%3));
         obj.tag = tagManager.GetTag(nextWall);
 
         seManager.WallTagNumber = nextWall;
 
-        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = "色 = " + nextWall%3 + ": 形 = " + nextWall/3;
-        #region Debug
-
-        //GameObject.Find("DebugText").GetComponent<ChangeText>().ChangeTextString = obj.tag;
-        //GameObject.Find("DebugText").GetComponent<ChangeText>().ChangeTextString = (nextWall%3).ToString();// tagManager.GetTag(nextWall);
-        //obj.layer = 12;
-        #endregion
-
-        //obj.tag = GetTag((byte)(nextWall / 3), (byte)(nextWall % 3));
+        if(wallSpawnNum / 3 < GameObject.Find("ComboManager").GetComponent<ComboManager>().ComboCount)
+        {
+            defaultgeneratTime = secondWallSpeed;
+        }
+        if ((wallSpawnNum / 3) * 2 < GameObject.Find("ComboManager").GetComponent<ComboManager>().ComboCount)
+        {
+            defaultgeneratTime = thirdWallSpeed;
+        }
 
         //タイマーを外部から弄れるように変更
         generatTime = defaultgeneratTime;

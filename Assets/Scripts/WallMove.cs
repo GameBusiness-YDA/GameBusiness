@@ -5,11 +5,19 @@ using UnityEngine;
 public class WallMove : MonoBehaviour
 {
 
+    float WallMoveSpeed;
+
+
+    private void Start()
+    {
+        WallMoveSpeed = 5f;
+    }
+
     // Update is called once per frame
     void Update()
     {
 
-        this.transform.position += new Vector3(0.0f, 0.0f, -0.05f);
+        transform.Translate(gameObject.transform.forward * -WallMoveSpeed * Time.deltaTime, Space.World);
 
         if (this.transform.position.z < -10.0f)
         {

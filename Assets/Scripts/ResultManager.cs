@@ -8,6 +8,16 @@ public class ResultManager : MonoBehaviour
 {
     public static ResultManager Instance;
 
+    long countUpScore;
+    long score;
+
+
+    GameObject s_GameManager;
+    GameManager gameManager;
+
+
+    GameObject s_ChangeText;
+    ChangeText changeText;
 
     void Awake()
     {
@@ -17,24 +27,22 @@ public class ResultManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        s_GameManager = GameObject.Find("GameManager");
+        gameManager = s_GameManager.GetComponent<GameManager>();
 
+        s_ChangeText = GameObject.Find("TextScore");
+        changeText = s_ChangeText.GetComponent<ChangeText>();
+
+        score = gameManager.GameScore;
+        countUpScore = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(score>=countUpScore)countUpScore+=100;
+
+        changeText.ChangeTextString = "Score : " + countUpScore;
     }
 
-    //ステージセレクトに移行する
-    public void OnEnterStageSelect()
-    {
-        SceneManager.LoadScene("StageSelect");
-    }
-
-    //Ingameに移行する
-    public void OnEnterRetry()
-    {
-        SceneManager.LoadScene("InGame");
-    }
 }

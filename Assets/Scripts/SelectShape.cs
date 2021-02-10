@@ -60,7 +60,7 @@ public class SelectShape : MonoBehaviour
     void Update()
     {
         SetButtonSprite();
-        transform.Find("ButtonText").GetComponent<ChangeText>().ChangeTextString = spriteNum.ToString();
+        
     }
 
     //引数で指定された画像をボタンのSpriteに差し込む。

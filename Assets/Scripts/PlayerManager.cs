@@ -82,8 +82,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    
-
     #region GetSet関数
     public byte B_Color
     {

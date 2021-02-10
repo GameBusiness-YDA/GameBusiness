@@ -15,6 +15,7 @@ public class GameTimer : MonoBehaviour
     GameObject s_gameTimerText;
     ChangeText changeText;
 
+    [SerializeField]
     float countGameTime;
 
     // Start is called before the first frame update

@@ -11,6 +11,10 @@ public class ComboManager : MonoBehaviour
     [SerializeField] int comboCount;
     [SerializeField] int comboMissed;
 
+
+    GameObject s_gameTimerText;
+    ChangeText changeText;
+
     private void Awake()
     {
         Instance = this;
@@ -22,30 +26,28 @@ public class ComboManager : MonoBehaviour
         nowCombo = 0;
         comboCount = 0;
         comboMissed = 0;
+
+
+        s_gameTimerText = GameObject.Find("ComboText");
+        changeText = s_gameTimerText.GetComponent<ChangeText>();
     }
 
     private void Update()
     {
-        if (comboCount >= 10)
-        {
-            GameObject.Find("GameManager").GetComponent<GameManager>().IsGameClear = 3;
-        }
+        changeText.ChangeTextString = NowCombo + "Combo!";
     }
-
 
     public void ComboPuls()
     {
         nowCombo++;
         comboCount++;
         if (MaxCombo <= NowCombo) MaxCombo = NowCombo;
-        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = NowCombo.ToString() + "Combo";
     }
 
     public void ComboReset()
     {
         nowCombo = 0;
         comboMissed++;
-        //GameObject.Find("ComboText").GetComponent<ChangeText>().ChangeTextString = NowCombo.ToString() + "Combo";
     }
 
 
@@ -60,6 +62,11 @@ public class ComboManager : MonoBehaviour
     {
         get { return nowCombo; }
         set { nowCombo = value; }
+    }
+
+    public int ComboCount
+    {
+        get { return comboCount; }
     }
 
     public int ComboMissCount
